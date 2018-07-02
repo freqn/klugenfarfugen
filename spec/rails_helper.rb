@@ -1,5 +1,5 @@
 require 'capybara/poltergeist'
-require 'factory_girl_rails'
+require 'factory_bot_rails'
 require 'capybara/rspec'
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
@@ -57,7 +57,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
   config.include Devise::Test::IntegrationHelpers, type: :feature
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   Capybara.javascript_driver = :poltergeist
   Capybara.server = :puma  
   # RSpec Rails can automatically mix in different behaviours to your tests
